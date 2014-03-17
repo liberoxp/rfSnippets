@@ -1,25 +1,10 @@
 # -*- coding: utf-8 -*-
 
-"""This module defines a function to build bounding box.
-
-   This module defines a function to a build bounding box object node
-   for the given object node. User can transform this bbox node for 
-   some purposes.
-
-   Usage: 
-       Import this module or open this script directly at Batch Script panel.
-
-       target = scene.getObject('object_name')
-       bbox = buildObjectBbox(target)
-
-   Requirements:
-     
-       RealFlow 2013 (This module has only been tested on this version
-                      , but should work as well on other versions.)
+"""This module defines a function to build bounding box of a given object node.
 """
 
-def buildObjectBbox(targetObj=None, bboxName='bbox'):
-    """ Build bounding box object. """
+def start(targetObj=None, bboxName='bbox'):
+    '''Main function.'''
 
     if targetObj.getType()!=2:
         scene.message('[buildBbox] Warning! Target node is not Object type. Exit building process.')
@@ -69,7 +54,7 @@ def buildObjectBbox(targetObj=None, bboxName='bbox'):
     return bboxObj
 
 def appendVertex(vtxs=[], pos=[0, 0, 0]):
-    """ Append vertex object to given list and position. """
+    '''Append vertex object to given list and position.'''
 
     vtxs.append(Vertex.new(Vector.new(pos[0], pos[1], pos[2])))
 
