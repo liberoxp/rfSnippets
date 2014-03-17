@@ -5,4 +5,13 @@ RealFlow Snippets is a python code package that (will) contains many useful code
 
 Snippet list
 ------------
-buildObjectBbox.py
+*buildObjectBbox.py*
+
+Basic usage
+-----------
+**buildObjectBbox**
+```
+import buildObjectBbox
+target = scene.getObject('object_name')
+buildObjectBbox.start(target)
+```
